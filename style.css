@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(192, 235, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    text-align: center;
+    font-size: 40px;
+    color: darkgreen;
+    text-align: center;
+}
+
+.survey{
+    font-size: 40px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+.btn{
+    font-size: 40px;
+    color: green;
+    background-color: aqua;
+    margin: 0;
+    margin-top: 20px;
+    size: 30px;
+    border-radius: 15px;
+    padding: 15px 32px;
+    cursor: pointer;
+   
+}
+.nextButton{
+    font-size: 30px;
+    background-color: rgb(171, 43, 197);
+    color: white;
+    /* size: 30px; */
+    border-radius: 15px;
+    padding: 15px 32px;
+    cursor: pointer;
+    float: right;
+    
+    
+}
+.nextBtn{
+    margin-top: 60%;
+    /* text-align: right; */
+}
+
+.previousButton{
+    font-size: 30px;
+    background-color: rgb(22, 6, 96);
+    color: white;
+    /* size: 30px; */
+    border-radius: 15px;
+    padding: 15px 32px;
+    cursor: pointer;
+    float: left;
+}
+
+.rating-container{
+    width: 1000px;
+    height: 500px;
+    background-color: #a7b6fd;
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+    top: 180px;
+    align-items: center;
+}
+
+
+.circle-input {
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+
+.question_num{
+    width: 100%;
+    text-align: end;
+}
+
+
+
+
+/* .welcome-page{
+    display: none;
+} */
+
+.survey{
+    display: none;
+}
