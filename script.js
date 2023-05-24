@@ -15,12 +15,38 @@ var  survey=document.querySelector(".survey")
 var  quesText=document.querySelector(".ques")
 var  nextButton=document.querySelector(".nextButton")
 var  previousButton=document.querySelector(".previousButton")
-
+var queNo = document.querySelector(".question_num")
 
 function displayQuestion(){
    const ques=questions[currentQuesIndex];
    quesText.textContent=currentQuesIndex+1+".) "+ ques.text
-
+   queNo.textContent = `${currentQuesIndex + 1}/${questions.length} `
+   let cInputn = document.querySelectorAll(".circle-input")
+   if(ques.type === 'text'){
+      cInputn.forEach(element => {
+         element.style.display = "none"
+      });
+      document.getElementById("text-input").style.display="block"
+      document.getElementById("rating-class2").style.display="none"
+   }
+   else if(ques.type=='rating' && ques.options==10){
+      document.getElementById("text-input").style.display="none"
+      cInputn.forEach(element => {
+         element.style.display = "block"
+      });
+      
+      document.getElementById("rating-class2").style.display="flex"
+      
+      
+   }
+   else{
+      document.getElementById("text-input").style.display="none"
+      cInputn.forEach(element => {
+         element.style.display = "block"
+      });
+      document.getElementById("rating-class2").style.display="none"
+      
+   }
 }
 
 function saveAnswer(){
@@ -29,10 +55,14 @@ function saveAnswer(){
    let selectedValue;
    console.log(ratingButtons)
 
-   //  console.log(selectedValue)
-   // var ans=[];
-   // ans.push({"question_id":ques.id,"user_answer":userAns.nodeValue})
-   // console.log(ans)
+}
+
+function changeHandler(){
+   let x=document.getElementsByClassName("circle-input")
+   for(let i=0;i<x.length;i++){
+      if(document.activeElement===x[i]) console.log(i+1)
+   }
+
 }
 
 
@@ -43,13 +73,13 @@ startBtn.addEventListener("click",()=>{
 })
 
 nextButton.addEventListener("click",()=>{
-   saveAnswer()
+   // getselectedAns()
    currentQuesIndex++;
    if(currentQuesIndex<questions.length) displayQuestion()
    else currentQuesIndex=questions.length-1
 })
 previousButton.addEventListener("click",()=>{
-   saveAnswer()
+   // saveAnswer()
    currentQuesIndex--;
    if(currentQuesIndex>=0){
        displayQuestion();
@@ -57,4 +87,8 @@ previousButton.addEventListener("click",()=>{
    else currentQuesIndex=0;
    
 })
+
+
+
+ 
 

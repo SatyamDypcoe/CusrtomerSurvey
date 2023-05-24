@@ -21,20 +21,29 @@
     <div class="survey">
         <div class="rating-container">
             <h3>Customer Survey</h3>
-            <p class="question_num">1/5</p>
+            <p class="question_num"></p>
             <div class="questions">
                 <p class="ques"></p>
-                
-                <input type="text" class="circle-input" value="1" name="rating" readonly>
-                <input type="text" class="circle-input" value="2" name="rating" readonly>
-                <input type="text" class="circle-input" value="3" name="rating" readonly>
-                <input type="text" class="circle-input" value="4" name="rating" readonly>
-                <input type="text" class="circle-input" value="5" name="rating" readonly>
+                <input name="textType" id="text-input" cols="30" rows="10" style="display: none">
+                <div class="rating-class">
+                    <input type="text" class="circle-input" value="1" name="rating" onclick=changeHandler() readonly>
+                    <input type="text" class="circle-input" value="2" name="rating" onclick=changeHandler() readonly>
+                    <input type="text" class="circle-input" value="3" name="rating" onclick=changeHandler() readonly>
+                    <input type="text" class="circle-input" value="4" name="rating" onclick=changeHandler() readonly>
+                    <input type="text" class="circle-input" value="5" name="rating" onclick=changeHandler() readonly>
+                    <div id="rating-class2" class="rating-class2">
+                        <input type="text" class="circle-input" value="6" name="rating" onclick=changeHandler() readonly>
+                        <input type="text" class="circle-input" value="7" name="rating" onclick=changeHandler() readonly>
+                        <input type="text" class="circle-input" value="8" name="rating" onclick=changeHandler() readonly>
+                        <input type="text" class="circle-input" value="9" name="rating" onclick=changeHandler() readonly>
+                        <input type="text" class="circle-input" value="10" name="rating" onclick=changeHandler() readonly>
+                    </div>
+                </div>
                 
             </div>
             <div class="btns">
-                <button class="nextButton">Next</button>
                 <button class="previousButton">Previous</button>
+                <button class="nextButton">Next</button>
             </div>
         </div>
         

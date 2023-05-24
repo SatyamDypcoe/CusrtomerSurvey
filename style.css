@@ -32,6 +32,13 @@ body{
     cursor: pointer;
    
 }
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+
 .nextButton{
     font-size: 30px;
     background-color: rgb(171, 43, 197);
@@ -40,7 +47,7 @@ body{
     border-radius: 15px;
     padding: 15px 32px;
     cursor: pointer;
-    float: right;
+    /* float: right; */
     
     
 }
@@ -57,12 +64,12 @@ body{
     border-radius: 15px;
     padding: 15px 32px;
     cursor: pointer;
-    float: left;
+    /* float: left; */
 }
 
 .rating-container{
     width: 1000px;
-    height: 500px;
+    height: 600px;
     background-color: #a7b6fd;
     position: relative;
     border: none;
@@ -90,9 +97,36 @@ body{
     text-align: end;
 }
 
+#text-input{
+    width: 75%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: large;
+}
 
+.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
 
+.rating-class{
+    display: flex;
+    
+}
+.rating-class,input{
+    margin-right: 15px;
+}  
 
+.rating-class2{
+    display: flex;
+}
+#rating-class2{
+    display: none;
+
+}
 /* .welcome-page{
     display: none;
 } */
